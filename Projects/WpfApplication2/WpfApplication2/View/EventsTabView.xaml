@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="WpfApplication2.View.EventsTabView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:Controls="clr-namespace:WpfApplication2.View"
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="60*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Row 1 -->
+        <Controls:EventsLogView   Grid.Row="0" Grid.Column="0" Background="Aqua"/>
+        <GridSplitter             Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Stretch"  ResizeBehavior="PreviousAndNext" Width="5" Background="#FFBCBCBC"/>
+        <Controls:FixMessageView  Grid.Row="0" Grid.Column="2" Background="BlanchedAlmond"/>
+
+        <!-- Row 2 -->
+        <Controls:LogStashStatsView Grid.ColumnSpan="3" Grid.Row="1" Background="Gray" />
+
+    </Grid>
+</UserControl>
